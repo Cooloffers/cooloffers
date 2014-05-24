@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @offer.title %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@offer.picture_url,) if @offer.picture.present? %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @offer.published %>
+</p>
+
+<p>
+  <strong>Offer duration:</strong>
+  <%= @offer.offer_duration %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @offer.place %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @offer.description %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>
