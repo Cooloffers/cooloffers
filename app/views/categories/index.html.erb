@@ -1,0 +1,38 @@
+<h1>Listing categories</h1>
+
+<!--<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.title %></td>
+        <td><%= category.picture %></td>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>-->
+
+<div class="collapse navbar-collapse">
+  <ul class="nav navbar-nav">
+    <% @categories.each do |category| %>
+    <li class="active">
+      <%= link_to category.title, category %>
+      <%= image_tag(category.picture_url, :width => 60) if category.picture.present? %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>

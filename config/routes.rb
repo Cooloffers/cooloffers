@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :categories
+
+  resources :users
+
   resources :offers
 
   # The priority is based upon order of creation: first created -> highest priority.
