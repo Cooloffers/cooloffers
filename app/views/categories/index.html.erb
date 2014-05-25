@@ -27,7 +27,7 @@
     <% @categories.each do |category| %>
     <li class="active">
       <%= link_to category.title, category %>
-      <%= image_tag(category.picture_url, :width => 60) if category.picture.present? %>
+      <%= image_tag(category.picture_url, :width => 150) if category.picture.present? %>
     </li>
     <% end %>
   </ul>
